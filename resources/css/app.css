@@ -1,0 +1,442 @@
+body {
+  background-image: url('../../public/images/Fondo.gif'); /* Establece una imagen de fondo animada desde la ruta especificada */
+  background-size: cover; /* Hace que la imagen de fondo cubra todo el área visible */
+  background-attachment: fixed; /* Fija la imagen para que no se mueva al hacer scroll */
+  background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+  font-family: 'Poppins', sans-serif; /* Define la fuente del texto para toda la página */
+  text-align: center; /* Centra todo el texto horizontalmente */
+  margin: 0; /* Elimina el margen por defecto del body */
+  padding: 0; /* Elimina el padding por defecto del body */
+  transition: all 0.4s ease; /* Aplica una transición suave de 0.4 segundos a cualquier cambio de propiedad */
+  min-height: 100vh; /* Ocupa al menos el alto total de la pantalla */
+}
+
+/*Barra De Navegación*/
+  #BarraNavegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    background: linear-gradient(135deg, #7F00FF, #E100FF);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+
+  }
+/* Estilo de la caja de login */
+.login-box {
+  border-radius: 20px; /* Bordes redondeados de 20px */
+  padding: 30px; /* Espaciado interno de 30px */
+  backdrop-filter: blur(100px); /* Aplica un difuminado al fondo detrás del elemento */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); /* Sombra alrededor de la caja */
+  display: flex; /* Activa el modelo Flexbox */
+  flex-direction: column; /* Organiza los elementos hijos en columna */
+  align-items: center; /* Centra horizontalmente los elementos */
+  justify-content: center; /* Centra verticalmente los elementos */
+  width: 60%; /* La caja ocupa el 60% del ancho disponible */
+  max-width: 400px; /* Máximo ancho de 400px */
+  margin: 80px auto; /* Centra la caja horizontalmente y deja 80px arriba */
+  transition: all 0.3s ease; /* Transición suave de 0.3 segundos */
+}
+
+.header-titulo {
+  max-width: 100%;
+  width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: center;
+  font-size: clamp(1rem, 4vw, 2rem); /* Escala con pantalla */
+}
+
+
+/* Estilo de los inputs del login */
+.login-input {
+  width: 80%; /* Ocupa el 80% del contenedor */
+  padding: 14px 18px; /* Espaciado interno arriba/abajo 14px, laterales 18px */
+  margin: 10px 0; /* Margen vertical de 10px */
+  border: none; /* Sin borde */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.08); /* Sombra interna sutil */
+  font-size: 16px; /* Tamaño de fuente */
+  outline: none; /* Elimina el borde resaltado al enfocar */
+  transition: all 0.2s ease; /* Transición suave */
+}
+
+/* Estilo al enfocar los inputs */
+.login-input:focus {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6); /* Sombra alrededor al enfocar */
+}
+
+/* Estilo del botón de login */
+.login-btn {
+background: linear-gradient(135deg, #7F00FF, #E100FF);
+  color: #fff; /* Color de texto */
+  padding: 14px 25px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 12px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia a mano al pasar el cursor */
+  font-size: 17px; /* Tamaño de fuente */
+  margin-top: 20px; /* Margen superior de 20px */
+  transition: all 0.3s ease; /* Transición suave */
+  width: 80%; /* Ancho del 80% */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15); /* Sombra */
+
+}
+
+.login-btn:hover {
+    transform: scale(1.05) translateX(-6px);
+  }
+
+
+
+/* Barra de navegación */
+#BarraNavegacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.MessageHeader{
+  position:relative;
+  background-color: #ffffff;
+  width: 20%;
+  border-radius: 40px;
+}
+
+.img-perrito-header {
+  position: absolute;
+  bottom: 2px;
+  right: 4px;
+  width: auto;
+  height: 50px;
+}
+
+
+.darkmode-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Oculta el checkbox nativo */
+.darkmode-switch input[type="checkbox"] {
+  display: none;
+}
+
+/* Estilo visual del switch */
+.darkmode-switch label {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 50px;
+  height: 24px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Íconos de sol y luna */
+.darkmode-switch label i {
+  font-size: 12px;
+  color: #fff;
+  z-index: 2;
+}
+
+.darkmode-switch label i.fa-sun {
+  position: absolute;
+  left: 6px;
+}
+
+.darkmode-switch label i.fa-moon {
+  position: absolute;
+  right: 6px;
+}
+
+/* Slider del toggle */
+.darkmode-switch label .slider {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+/* Mueve el slider al activarse */
+.darkmode-switch input:checked + label .slider {
+  transform: translateX(26px);
+}
+
+
+
+
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-container input {
+  width: 100%;
+  padding-right: 40px; /* espacio para el ojito */
+}
+
+.password-container button {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  font-size: 18px;
+}
+
+
+
+
+
+/* Imagen Principal */
+#ImagenPrincipal {
+  width: 180px; /* Ancho fijo */
+  height: auto; /* Altura automática según ancho */
+  margin-bottom: 0; /* Sin margen inferior */
+}
+
+
+
+/* Imagen mascotita */
+#mascotita {
+  width: 100px; /* Ancho fijo */
+  position: absolute; /* Posiciona de forma absoluta */
+  top: -40px; /* 40px hacia arriba */
+  left: -30px; /* 30px hacia la izquierda */
+  background-color: transparent;
+}
+
+/* Mensaje de error */
+#MsjError {
+  padding: 15px; /* Espaciado interno */
+  background-color: rgba(248, 215, 218, 0.85); /* Fondo rosado semitransparente */
+  color: #721c24; /* Texto rojo oscuro */
+  border: 1px solid #f5c6cb; /* Borde rosado */
+  border-radius: 10px; /* Bordes redondeados */
+  margin-bottom: 20px; /* Margen inferior */
+  width: 80%; /* Ancho del 80% */
+}
+
+/* Contenedor interno login */
+.login-box-interno {
+  display: flex; /* Flexbox */
+  flex-direction: column; /* En columna */
+  align-items: center; /* Centra horizontalmente */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  gap: 15px; /* Espacio entre elementos */
+}
+
+
+/* Caja de bienvenida */
+.bienvenida-box {
+  max-width: 800px;
+  margin: 40px auto 0;
+  padding: 25px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+/* Imagen opcional de bienvenida */
+.bienvenida-imagen {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para el ojo */
+.ojo {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+  border-radius: 50%;
+  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.07);
+}
+
+/* Efecto al pasar el cursor */
+.ojo:hover {
+  transform: scale(1.1) rotate(10deg);
+  filter: drop-shadow(0 6px 16px rgba(255, 255, 255, 0.4));
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Botón de mostrar/ocultar contraseña */
+#togglePassword {
+  background: rgba(0, 0, 0, 0.07);
+  border: none;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+
+}
+
+/* Efecto al pasar el cursor */
+#togglePassword:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.1);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo del ícono dentro del botón */
+#togglePassword .ojo {
+  color: #fff;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el cursor en el ícono */
+#togglePassword:hover .ojo {
+  color: #E100FF;
+  transform: rotate(10deg);
+}
+
+
+
+/* Ajustes para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+
+  /* Barra de navegación en columna */
+  #BarraNavegacion {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  /* Logo más pequeño */
+  #ImagenPrincipal {
+    width: 140px;
+  }
+
+  /* Contenedor del mensaje en el header más ancho y sin borde tan grande */
+  .MessageHeader {
+    width: 90%;
+    border-radius: 20px;
+    padding: 5px;
+  }
+
+  /* Imagen perrito más pequeña */
+  .img-perrito-header {
+    height: 35px;
+    right: 8px;
+    bottom: 4px;
+  }
+
+  /* Caja de login más ajustada */
+  .login-box {
+    width: 90%;
+    padding: 20px;
+    margin: 50px auto;
+  }
+
+  /* Inputs y botones más anchos */
+  .login-input, .login-btn {
+    width: 100%;
+  }
+
+  /* Mensaje de error ajustado */
+  #MsjError {
+    width: 95%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  /* Caja de bienvenida más compacta */
+  .bienvenida-box {
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  /* Imagen de bienvenida más responsiva */
+  .bienvenida-imagen {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Password container ajustado */
+  .password-container input {
+    padding-right: 35px;
+  }
+
+  .password-container button {
+    right: 6px;
+    font-size: 16px;
+  }
+}
+
+
+
+
+@media (max-width: 480px) {
+  /* Cambiar layout del nav a columna y centrar */
+  #BarraNavegacion {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px;
+    padding: 10px 15px;
+  }
+
+  /* Logo más pequeño y centrado */
+  #ImagenPrincipal {
+    width: 90px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  /* El mensaje (MessageHeader) centrado y con tamaño más pequeño */
+  .MessageHeader {
+    width: 100%;
+    text-align: center;
+  }
+
+  .MessageHeader h1 {
+    font-size: clamp(16px, 4vw, 20px);
+    margin: 0;
+  }
+
+  /* Contenedor User_Box centrado, con espacio entre elementos */
+  .User_Box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* Imagen usuario más pequeña */
+  .user-img {
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+  }
+
+  /* Toggle Dark mode pequeño */
+  .darkmode-switch {
+    transform: scale(0.8);
+  }
+
+  /* Ajustar menú desplegable para que se vea bien */
+  .menu-opciones {
+    top: 40px !important;
+    right: 10px !important;
+    min-width: 120px;
+  }
+}

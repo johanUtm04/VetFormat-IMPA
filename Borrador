@@ -1,0 +1,1 @@
+    Route::post('/capture-data', [ReporteController::class, 'store'])->name('reports.store');
