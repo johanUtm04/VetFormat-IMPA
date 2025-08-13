@@ -20,8 +20,7 @@ Receta
       <label>Fecha___________</label>
     </div>
   </div>
-    {{-- FORMULARIO --}}
-  <form method="POST" action="{{ route('guardar.formato') }}">
+
   <!-- SECCIÓN: DATOS DEL MÉDICO -->
   <div class="campo">
     <label>MVZ:</label>

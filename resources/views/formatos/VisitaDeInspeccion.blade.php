@@ -18,8 +18,7 @@ Visita de inspección
       <label>Fecha___________</label>
     </div>
   </div>
-      {{-- FORMULARIO --}}
-  <form method="POST" action="{{ route('guardar.formato') }}">
+
  <br>
 
    {{-- Hoja 1 --}}

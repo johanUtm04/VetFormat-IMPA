@@ -20,8 +20,7 @@ Consentimiento Informado para Eutanasia
       <label>Fecha___________</label>
     </div>
   </div>
-    {{-- FORMULARIO --}}
-  <form method="POST" action="{{ route('guardar.formato') }}">
+
   <!-- SECCIÓN: PROPIETARIO O POSEEDOR -->
   <h3 class="subtitulos">Propietario o Poseedor del Ejemplar</h3>
 

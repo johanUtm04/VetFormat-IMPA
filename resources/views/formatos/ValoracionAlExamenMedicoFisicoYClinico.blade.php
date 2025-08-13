@@ -17,8 +17,7 @@
     </div>
   </div>
 
-    {{-- FORMULARIO --}}
-  <form method="POST" action="{{ route('guardar.formato') }}">
+
   <div class="seccion1">
     <h3 class="subtitulos">Datos del Propietario</h3>
     <div class="campo">

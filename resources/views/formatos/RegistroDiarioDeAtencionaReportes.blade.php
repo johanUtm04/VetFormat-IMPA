@@ -22,8 +22,7 @@
 
     {{-- TABLA --}}
     <div class="tabla">
-    {{-- FORMULARIO --}}
-  <form method="POST" action="{{ route('guardar.formato') }}">
+
         <table id="miTabla">
           <thead>
             <tr>
@@ -61,8 +60,7 @@
     <div class="botonContenedor">
       <button type="button" class="btn-imprimir" onclick="window.print()">Imprimir pantalla</button>
     </div>
-  <input type="hidden" name="capture_data_id" value="{{ $captureData->id }}">
-      </form>
+
   </div>
 
   {{-- ESTILOS --}}

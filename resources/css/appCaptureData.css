@@ -495,6 +495,27 @@ body.dark header {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
 }
 
+.copiar-btn {
+  background: linear-gradient(135deg, #ffa600, #E100FF);
+  color: #fff;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 17px;
+  margin-top: 20px;
+  width: 50%;            /* Que ocupe todo el ancho */
+  box-sizing: border-box;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.copiar-btn:hover {
+  background-color: #ffffff;
+  transform: translateY(-8px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+}
+
 /* Imagen dentro del formulario */
 #ImagenPrincipal {
   width: 180px;

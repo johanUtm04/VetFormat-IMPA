@@ -21,8 +21,7 @@ Acta
       <label>Fecha___________</label>
     </div>
   </div>
-    {{-- FORMULARIO --}}
-  <form method="POST" action="{{ route('guardar.formato') }}">
+
   {{-- Hoja 1 --}}
   <div class="hoja1">
 
@@ -176,9 +175,6 @@ Acta
 
   </div> {{-- Fin hoja 2 --}}
 
-  {{-- CierreForm --}}
-  <input type="hidden" name="capture_data_id" value="{{ $captureData->id }}">
-  </form>
 
 </div>
 

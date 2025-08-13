@@ -18,8 +18,6 @@ Logistica de esterilizacion en colonias
       <label>Fecha___________</label>
     </div>
   </div>
-    {{-- FORMULARIO --}}
-  <form method="POST" action="{{ route('guardar.formato') }}">
   {{-- TÍTULO PRINCIPAL --}}
   <h3 class="subtitulos" style="margin-top: 50px;">LOGÍSTICA Y REQUISITOS PARA LA REALIZACIÓN DE PROCEDIMIENTO QUIRÚRGICO DE ESTERILIZACIÓN EN COLONIAS, TENENCIAS Y COMUNIDADES</h3>
 
@@ -69,10 +67,6 @@ Logistica de esterilizacion en colonias
   <footer style="text-align: center; margin-top: 60px; font-size: 12px;">
     Instituto Moreliano de Protección Animal
   </footer>
-
-  {{-- CierreForm --}}
-  <input type="hidden" name="capture_data_id" value="{{ $captureData->id }}">
-  </form>
 </div>
 
 {{-- ESTILOS INTERNOS --}}

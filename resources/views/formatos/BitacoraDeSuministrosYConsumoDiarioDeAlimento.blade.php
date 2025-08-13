@@ -18,8 +18,7 @@ Bitacora de suministrados y consumo diarios de alimentos
     </div>
   </div>
 
-      {{-- FORMULARIO --}}
-  <form method="POST" action="{{ route('guardar.formato') }}">
+
   <div class="tabla">
       <table>
         <thead>
@@ -60,8 +59,7 @@ Bitacora de suministrados y consumo diarios de alimentos
 
     </form>
   </div>
-  <input type="hidden" name="capture_data_id" value="{{ $captureData->id }}">
-  </form>
+
 </div>
 
 <style>

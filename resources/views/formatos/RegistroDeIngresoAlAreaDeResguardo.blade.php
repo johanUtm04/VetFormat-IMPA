@@ -20,8 +20,7 @@
       </div>
     </div>
 
-  {{-- FORMULARIO --}}
-  <form method="POST" action="{{ route('guardar.formato') }}">
+
     {{-- DATOS DEL EJEMPLAR --}}
     <h3 class="subtitulo">Datos del Ejemplar</h3>
 
@@ -76,8 +75,7 @@
     <div class="botonContenedor">
       <button type="button" class="btn-imprimir" onclick="window.print()">Imprimir pantalla</button>
     </div>
-                              <input type="hidden" name="capture_data_id" value="{{ $captureData->id }}">
-                              </form>
+
   </div>
 
   <style>

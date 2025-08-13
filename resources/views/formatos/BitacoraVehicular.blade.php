@@ -31,8 +31,7 @@ Bitacora Vehicular
     </div>
   </div>
 
-    {{-- FORMULARIO --}}
-  <form method="POST" action="{{ route('guardar.formato') }}">
+
     <div class="tabla">
     
     {{-- Formulario que enviará los datos a 'guardar_datos.php' usando método POST --}}
@@ -85,7 +84,6 @@ Bitacora Vehicular
         <label>Conductor Responsable <br> (Nombre y Firma)</label>
       </div>
 
-    </form>
   </div>
 
   {{-- Estilos CSS incrustados en la misma plantilla --}}

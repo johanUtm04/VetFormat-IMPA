@@ -17,8 +17,7 @@ Encuesta de satisfacción
       <label>Fecha___________</label>
     </div>
   </div>
-    {{-- FORMULARIO --}}
-  <form method="POST" action="{{ route('guardar.formato') }}">
+
   <h4 style="font-size:11px; margin-top:10px;">
     Estimado ciudadano, la presente encuesta está encaminada a detectar las áreas de oportunidad de mejora de nuestro servicio, y por ello, agradecemos su tiempo y opinión en la presente encuesta.
   </h4>

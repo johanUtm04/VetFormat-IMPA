@@ -20,8 +20,7 @@ Devolución de ejemplar
       <label>Fecha___________</label>
     </div>
   </div>
-    {{-- FORMULARIO --}}
-  <form method="POST" action="{{ route('guardar.formato') }}">
+
   <!-- SECCIÓN: DATOS DEL ACTO -->
   <div class="campo">
     <label>Corresponde al Instituto Moreliano de Protección Animal tener bajo su resguardo a los ejemplares que se encuentren en vía pública, por lo cual, siendo las</label>

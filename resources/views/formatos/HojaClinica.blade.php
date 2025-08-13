@@ -21,8 +21,7 @@ Consentimiento Informado para Eutanasia
     </div>
   </div>
 
-    {{-- FORMULARIO --}}
-  <form method="POST" action="{{ route('guardar.formato') }}">
+
   <!-- SECCIÓN: PROPIETARIO O POSEEDOR -->
   <h3 class="subtitulos">Propietario o Poseedor del Ejemplar</h3>
 
@@ -101,9 +100,7 @@ Consentimiento Informado para Eutanasia
     <div class="lineaFirma"></div>
     <label>Nombre y Firma del propietario o poseedor</label>
   </div>
-  {{-- CierreForm --}}
-  <input type="hidden" name="capture_data_id" value="{{ $captureData->id }}">
-  </form>
+
 
 </div>
 

@@ -21,8 +21,7 @@ Resguardo de Ejemplares
     </div>
   </div>
 
-      {{-- FORMULARIO --}}
-  <form method="POST" action="{{ route('guardar.formato') }}">
+
   <!-- SECCIÓN: FECHAS -->
   <div class="campo">
     <label>Fecha de resguardo:</label>

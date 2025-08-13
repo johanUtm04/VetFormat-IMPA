@@ -19,8 +19,6 @@ Atención a Reportes de Ejemplares Agresores
     </div>
   </div>
 
-      {{-- FORMULARIO --}}
-  <form method="POST" action="{{ route('guardar.formato') }}">
 <br>
   <h2 class="subtitulo">ATENCIÓN A REPORTES DE EJEMPLARES AGRESORES</h2>
 
@@ -136,9 +134,7 @@ Atención a Reportes de Ejemplares Agresores
       <input type="text" class="inputsReporte"/>
     </div>
   </div>
-  {{-- CierreForm --}}
-  <input type="hidden" name="capture_data_id" value="{{ $captureData->id }}">
-  </form>
+
 </div>
 <style>
   body {

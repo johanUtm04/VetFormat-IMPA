@@ -16,8 +16,7 @@ Registro de eutanasia
       <label>Fecha___________</label>
     </div>
   </div>
-    {{-- FORMULARIO --}}
-  <form method="POST" action="{{ route('guardar.formato') }}">
+
   <strong>Datos Generales</strong> <br>
 
 <div class="campo"><input type="date" class="inputsReporte" placeholder="Fecha de Eutanasia"></div>
@@ -69,8 +68,7 @@ Registro de eutanasia
       <div class="lineaFirma"></div>
     <label>M.V.Z. Responsable <br> (nombre y firma)</label>    </div>
   </div>
-    <input type="hidden" name="capture_data_id" value="{{ $captureData->id }}">
-    </form>
+
 </div>
 
 <style>

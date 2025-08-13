@@ -20,8 +20,6 @@ Aviso de atencion
 
   </div>
 
-      {{-- FORMULARIO --}}
-  <form method="POST" action="{{ route('guardar.formato') }}">
   <br><br>
   {{-- Sección 1 --}}
   <p>Siendo las 

@@ -21,8 +21,7 @@ Inventario de Ejemplares
         <label>Fecha___________</label>
       </div>
     </div>
-    {{-- FORMULARIO --}}
-  <form method="POST" action="{{ route('guardar.formato') }}">
+
     <br><br><br>
     {{-- Sección 1: Anexo --}}
     <h3>Anexo</h3>

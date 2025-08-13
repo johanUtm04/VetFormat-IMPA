@@ -17,8 +17,7 @@ Responsiva de Autorización para Procedimiento Quirúrgico de Esterilización
       <label>Fecha___________</label>
     </div>
   </div>
-    {{-- FORMULARIO --}}
-  <form method="POST" action="{{ route('guardar.formato') }}">
+
   {{-- Sección 1: Datos del Solicitante --}}
   <h3>Datos del Solicitante</h3>
 

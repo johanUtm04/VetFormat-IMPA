@@ -60,7 +60,7 @@ $user = User::create([
 ]);
 
 
-    return redirect()->route('medicos.index')->with('created', 'Médico registrado en base De datos Correctamente');
+    return redirect()->route('medicos.index')->with('created', 'Médico registrado Correctamente');
 }
 
 
@@ -117,7 +117,7 @@ public function update(Request $request, $id)
         dd("Usuario no encontrado con correo: " . $correoAnterior);
     } */
 
-    return redirect()->route('medicos.index')->with('updated', 'Médico actualizado correctamente en ambas tablas');
+    return redirect()->route('medicos.index')->with('updated', 'Médico actualizado correctamente');
 }
 
 

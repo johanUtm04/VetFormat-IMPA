@@ -19,8 +19,7 @@ Consentimiento Informado sobre estetica y baño
     </div>
   </div>
 
-    {{-- FORMULARIO --}}
-  <form method="POST" action="{{ route('guardar.formato') }}">
+
 
 <h3 class="subtitulo">Datos del propietario</h3>
 

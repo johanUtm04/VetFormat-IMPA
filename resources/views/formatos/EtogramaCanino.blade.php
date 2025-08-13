@@ -20,8 +20,7 @@
       <label>Fecha___________</label>
     </div>
   </div>
-    {{-- FORMULARIO --}}
-  <form method="POST" action="{{ route('guardar.formato') }}">
+
   <!-- DATOS GENERALES -->
   <div class="seccion1">
     <h3 class="subtitulos">Datos Generales</h3>

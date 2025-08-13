@@ -208,24 +208,41 @@
     display: block;
     height: var(--print-spacer-height, 0px); /* valor por defecto */
   }
-  .btn-imprimir {
+.btn-imprimir {
     background: linear-gradient(135deg, #7F00FF, #E100FF);
     color: #fff;
     padding: 14px 25px;
     border: none;
     border-radius: 12px;
-    font-size: 14px;
+    font-size: 16px; /* un poco más grande para resaltar */
+    font-weight: bold; /* enfatiza acción importante */
     margin-top: 20px;
     cursor: pointer;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25); /* sombra más intensa */
     transition: all 0.3s ease;
-  }
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* espacio entre icono y texto si agregas uno */
+    width: 30%;
+    justify-content: center;
+}
 
-  .btn-imprimir:hover {
-    background-color: #ffffff;
-    color: #7F00FF;
-    transform: translateY(-5px);
-  }
+.btn-imprimir:hover {
+    transform: translateY(-3px) scale(1.05); /* efecto hover más llamativo */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-imprimir::before {
+    content: "";
+    display: inline-block;
+    width: 20px;   /* ancho del ícono */
+    height: 20px;  /* alto del ícono */
+    background-image: url('/images/pdf.png'); /* ruta de tu imagen */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 
   </style>
 
@@ -291,7 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
   <input type="hidden" name="nombre_formato"  id="nombre_formato_guardar" value="">
   <input type="hidden" name="capture_data_id" value="{{ $captureData->id }}"> 
   <input type="file" name="pdf_file" accept="application/pdf" required>
-  <button type="submit" class="btn-imprimir ocultar-impresion">Subir PDF :D</button>
+  <button type="submit" class="btn-imprimir ocultar-impresion">Subir PDF</button>
 </form>
   <footer id="footerReporte">
     <!-- Pie de página con información de contacto -->

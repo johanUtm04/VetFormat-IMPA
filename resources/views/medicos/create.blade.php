@@ -14,7 +14,7 @@ Agregar Nuevo Médico
 <div class="admin-panel">
 
     <div class="panel-header">
-        <h2>🩺 Registrar Médico</h2>
+        <h2>Registrar Médico</h2>
         <a href="{{ route('medicos.index') }}" class="btn-secondary">← Volver</a>
     </div>
 

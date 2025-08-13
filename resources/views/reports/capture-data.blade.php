@@ -30,7 +30,7 @@ Registro de Datos del Reporte
 
 
 
-    <form method="POST" action="{{route('guardar.datos.generales')}}">
+    <form id="formReporte" method="POST" action="{{route('guardar.datos.generales')}}">
       @csrf
       {{-- 🟣 Personal que Atiende --}}
       <h3>🟣Personal que Atiende</h3>
@@ -103,15 +103,31 @@ Registro de Datos del Reporte
       <button type="button" onclick="mostrarRuta()">Mostrar ruta</button>
 
       <div id="map" style="height: 400px; width: 100%; margin-top:20px;"></div>
-
+      <button type="button" onclick="copiarLinkRuta()" class="copiar-btn" style="margin-top:10px;">Copiar link de ruta</button>
       <button type="submit" class="login-btn" style="margin-top:20px;">Guardar Reporte Capture-Data</button>
-    </form>
+
+
+<!-- Mensaje flotante al final del formulario -->
+<div id="mensajeCopiado" style="
+    display:none;
+    position: relative;
+    margin-top: 15px;
+    background-color: rgba(76, 175, 80, 0.9);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+    transition: opacity 0.3s;
+">¡Link copiado al portapapeles!</div>
+
   </div>
 </div>
 
 
 
 <script>
+  let omitirUbicacion = false;
   let map;
   let directionsService;
   let directionsRenderer;
@@ -242,6 +258,35 @@ function llenadoAutomatico() {
   document.getElementById("direccion").value = "Av. Madero, Morelia";
 }
 
+function copiarLinkRuta() {
+    const direccionInput = document.getElementById('direccion');
+    const destino = direccionInput.value.trim();
+    if (!destino) {
+        alert("Escribe una dirección primero");
+        return;
+    }
+
+    // Si tienes la ubicación del usuario
+    let origen = "";
+    if (userLocation) {
+        origen = `${userLocation.lat},${userLocation.lng}`;
+    } else {
+        origen = "19.7008,-101.1847"; // fallback Morelia
+    }
+
+    const linkRuta = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origen)}&destination=${encodeURIComponent(destino)}&travelmode=driving`;
+
+    navigator.clipboard.writeText(linkRuta).then(() => {
+        const mensaje = document.getElementById('mensajeCopiado');
+        mensaje.style.display = 'block';
+        setTimeout(() => {
+            mensaje.style.display = 'none';
+        }, 4000);
+    }).catch(() => {
+        alert('No se pudo copiar el link.');
+    });
+}
 </script>
 
 @endsection
+{{-- johan --}}

@@ -20,8 +20,7 @@ Certificado de adopción
       <label>Fecha___________</label>
     </div>
   </div>
-    {{-- FORMULARIO --}}
-  <form method="POST" action="{{ route('guardar.formato') }}">
+
   <!-- SECCIÓN: MENSAJE LEGAL -->
   <p class="mensaje">
     De conformidad con los Artículos 2 y 4 de la Ley de Derechos, Bienestar y Protección a los Animales del Estado de Michoacán de Ocampo, se establece que los animales no humanos deben gozar de las siguientes libertades fundamentales:
