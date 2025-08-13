@@ -15,7 +15,7 @@ Reporte
 
   <div class="encabezado">
     <img src="{{ asset('images/MoreliaBrilla.png') }}" alt="Logo Morelia Brilla" class="logo">
-    <h2 class="tituloformato nombre_formato">Reporte</h2>
+    <h2 class="tituloformato nombre_formato">Reporte </h2>
     <div class="encabezado3">
       <label>Forma 001</label><br>
       <label>Reporte no______</label><br>
