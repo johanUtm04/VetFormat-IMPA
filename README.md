@@ -48,7 +48,7 @@ Con esta solución, se centraliza la información y se agiliza la identificació
 ### Página Principal (veterinario)  
 ![Pagina Principal](docs/capturas/image-3.png)
 
-### Formulario de Información pre-llenado  
+### Formulario de Información de datos (Domicilio, Fecha, Motivo de Reporte, etc.)
 ![Formulario](docs/capturas/image-4.png)
 
 ### Seleccionar Formato  
@@ -57,7 +57,7 @@ Con esta solución, se centraliza la información y se agiliza la identificació
 ### Llenado de Formato  
 ![Llenado Formato](docs/capturas/image-6.png)
 
-### Historial de Formatos y Respuestas  
+### Historial de Formatos y datos asociados 
 ![Historial](docs/capturas/image-7.png)
 
 ### Error 404  
