@@ -1,0 +1,1608 @@
+
+/*-------------------------------------------Estilos De plantilla---------------------------------------*/
+body {
+  font-family: 'Poppins', sans-serif; /* Define la fuente del texto para toda la página */
+    margin: 0;
+    padding: 0;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    background-color: white;
+    background-size: cover;
+     height: 100vh;
+  }
+/*Barra De Navegación*/
+  #BarraNavegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    background: linear-gradient(135deg, #7F00FF, #E100FF);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+
+  }
+
+  
+.MessageHeader {
+  display: inline-block;
+  padding: 10px 20px;
+  max-width: 80%;
+  word-wrap: break-word;
+  background-color: white;
+  border-radius: 40px;
+  color: #000000; /* <- Aquí lo agregas */
+}
+
+
+
+.MessageHeader h2 {
+  font-size: clamp(14px, 2vw, 24px);
+}
+
+
+
+.darkmode-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Oculta el checkbox nativo */
+.darkmode-switch input[type="checkbox"] {
+  display: none;
+}
+
+/* Estilo visual del switch */
+.darkmode-switch label {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 50px;
+  height: 24px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Íconos de sol y luna */
+.darkmode-switch label i {
+  font-size: 12px;
+  color: #fff;
+  z-index: 2;
+}
+
+.darkmode-switch label i.fa-sun {
+  position: absolute;
+  left: 6px;
+}
+
+.darkmode-switch label i.fa-moon {
+  position: absolute;
+  right: 6px;
+}
+
+/* Slider del toggle */
+.darkmode-switch label .slider {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+/* Mueve el slider al activarse */
+.darkmode-switch input:checked + label .slider {
+  transform: translateX(26px);
+}
+
+  #ImagenPrincipal {
+    width: 150px;
+    height: auto;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  #ImagenPrincipalAdmin{
+        width: 150px;
+    height: auto;
+  }
+  #ImagenPrincipal:hover {
+    transform: scale(1.05) translateY(-5px);
+    filter: brightness(1.2);
+  }
+  /*footer*/
+  .footer {
+    background: linear-gradient(135deg, #7F00FF, #E100FF);
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+  }
+
+/*Caja Principal Usuario*/
+  .User_Box {
+    display: flex;
+    width: 70px;
+    justify-content: center;
+  }
+
+/*Imagen Usuario*/
+  #UserImg {
+    width: 50%;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+
+    border: none;
+
+  }
+  #UserImg:hover {
+    transform: scale(1.05) translateY(-5px);
+    filter: brightness(1.5);
+    cursor: pointer;
+  }
+
+.btn-return {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    border-radius: 8px;
+    font-size: 15.5px;
+    background: linear-gradient(135deg, #7F00FF, #E100FF);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.btn-return:hover {
+    transform: scale(1.05) translateX(-6px);
+  }
+
+body.dark header {
+  background-color: #ffffff !important;
+  color: #222 !important;
+}
+
+
+
+
+
+.user-menu {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.user-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  object-fit: cover;
+
+}
+
+.user-img:hover {
+  transform: scale(1.05);
+}
+
+.menu-opciones {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 60px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.menu-opciones a {
+  display: block;
+  padding: 12px 18px;
+  color: #333;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 6px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: -80%; /* posición arriba */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 14px;
+  pointer-events: none; /* que no interfiera con el mouse */
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+/*-------------------------------------------Fin De Estilos plantilla---------------------------------------*/
+
+
+
+
+
+
+/*-------------------------------------------FIN CCS PANTALLA DE REPORTES---------------------------------------*/
+
+/* Contenedor principal */
+.Reportes_box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 1200px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Título */
+.Reportes_box h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #7F00FF, #E100FF);
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+/* Filtro */
+.Filtro_box {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Filtro_box input,
+.Filtro_box button {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.Filtro_box input {
+  width: 200px;
+}
+
+.Filtro_box button {
+  background: linear-gradient(135deg, #7F00FF, #E100FF);
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.Filtro_box button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Tabla de reportes */
+.Reportes_tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.Reportes_tabla th, .Reportes_tabla td {
+  padding: 14px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.Reportes_tabla th {
+  background: linear-gradient(135deg, #7F00FF, #E100FF);
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.Reportes_tabla td {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Botón de opciones */
+.Opciones_boton {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #7F00FF, #E100FF);
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.Opciones_boton:hover {
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+/*-------------------------------------------INICIO CCS PANTALLA DE REPORTES---------------------------------------*/
+/* Container */
+.container {
+  max-width: 900px;
+  margin: auto;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+}
+
+/* Títulos */
+h3, h4 {
+  color: #1a202c;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* Tabla */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table thead {
+  background: #2c3e50;
+  color: white;
+  font-weight: 600;
+}
+
+table th, table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Alterna filas */
+table tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+/* Botones */
+.btn-primary {
+  background-color: #3490dc;
+  border: none;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #2779bd;
+}
+
+/* Modal contenido */
+.modal-content {
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Modal header */
+.modal-header {
+  border-bottom: 1px solid #eee;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+/* Modal footer */
+.modal-footer {
+  border-top: 1px solid #eee;
+}
+
+/* Alert info para último reporte */
+.alert-info {
+  background: #d9edf7;
+  color: #31708f;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  table thead {
+    display: none;
+  }
+  table, table tbody, table tr, table td {
+    display: block;
+    width: 100%;
+  }
+  table tr {
+    margin-bottom: 15px;
+  }
+  table td {
+    padding-left: 50%;
+    position: relative;
+  }
+  table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+  }
+}
+
+
+/*-------------------------------------------Inicio De Estilos Inicio---------------------------------------*/
+
+/*Caja Principal*/
+  .Inicio_box{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+
+    .MensajeBienvenida_Box {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  /* Mensaje*/
+  .MensajeBienvenida {
+    background: linear-gradient(135deg, #7F00FF, #E100FF);
+    color:#000000;
+    padding: 40px 20px;
+    border-radius: 20px;
+    width: 65%;
+    height: 280px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     font-weight: 700;    
+  }
+
+
+  .BotonesAbajo_box {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+  }
+
+  .BotonAbajo,
+  .BotonAbajo2 {  
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 15.5px;
+    background: linear-gradient(135deg, #7F00FF, #E100FF);
+    border: none;
+    cursor: pointer;
+    transition: all 0.22s ease;
+    font-weight: 800; /* o 700 para negrita */
+    color: #000000;
+  }
+
+
+
+  .BotonAbajo:hover,
+  .BotonAbajo2:hover {
+    transform: scale(1.05) translateX(-6px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+  }
+
+/*-------------------------------------------Fin De Estilos Inicio---------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------Inicio De Estilos Capture-data ---------------------------------------*/
+
+#imgPerroGato {
+  width: 150px;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+.formbold-mb-3 {
+  margin-bottom: 15px;
+}
+
+.formbold-relative {
+  position: relative;
+}
+
+.formbold-opacity-0 {
+  opacity: 0;
+}
+
+.formbold-stroke-current {
+  stroke: currentColor;
+}
+
+#supportCheckbox:checked ~ div span {
+  opacity: 1;
+}
+
+/* Contenedor principal que envuelve todo */
+.formbold-main-wrapper {
+  display: block;         /* No flex para que ocupe todo el ancho */
+  width: 1000px;           /* Ancho total de la ventana */
+  margin: 0;
+  padding: 0;
+  margin: 40px auto;
+}
+
+.formbold-form-wrapper {
+  margin: 0 auto;
+  width: 100%;
+
+}
+
+.formbold-img {
+  margin-bottom: 45px;
+}
+
+.formbold-form-title {
+  margin-bottom: 30px;
+}
+
+.formbold-form-title h2 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  color: #07074d;
+}
+
+.formbold-form-title p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #536387;
+  margin-top: 12px;
+}
+
+.formbold-input-flex {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.formbold-input-flex > div {
+  width: 50%;
+}
+
+.formbold-form-input {
+  text-align: center;
+  width: 100%;
+  padding: 13px 22px;
+  border-radius: 5px;
+  border: 1px solid #dde3ec;
+  background: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  color: #536387;
+  outline: none;
+  resize: none;
+  box-sizing: border-box;
+}
+
+.formbold-form-input:focus {
+  border-color: #6a64f1;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.formbold-form-label {
+  color: #536387;
+  font-size: 14px;
+  line-height: 24px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.formbold-checkbox-label {
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+  font-size: 16px;
+  line-height: 24px;
+  color: #536387;
+}
+
+.formbold-checkbox-label a {
+  margin-left: 5px;
+  color: #6a64f1;
+}
+
+.formbold-input-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.formbold-checkbox-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
+  margin-top: 2px;
+  border: 0.7px solid #dde3ec;
+  border-radius: 3px;
+}
+.formbold-btn {
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 14px 25px;
+  border: none;
+  font-weight: 500;
+  background-color: #6a64f1;
+  color: white;
+  cursor: pointer;
+  margin-top: 25px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formbold-btn:hover {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.regresar-captureData-box {
+  display: flex;
+  justify-content: flex-start;  
+}
+
+.volver-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 15.5px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.volver-link:hover {
+  color: #7F00FF;
+}
+
+/* ----------------- Estilos para formulario específico ----------------- */
+
+.login-box {
+  border-radius: 20px;
+  padding: 30px;
+  backdrop-filter: blur(100px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;        /* Que ocupe todo el ancho del contenedor padre */
+  max-width: 100%;    /* Sin límite máximo */
+  margin: 0;          /* Sin margen para que empiece pegado */
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.login-box-interno {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+  box-sizing: border-box;
+}
+
+.login-input {
+  width: 100%;               /* Ocupar todo el ancho disponible */
+  padding: 14px 18px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 10px;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.08);
+  font-size: 16px;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.login-input:focus {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+.login-btn {
+  background: linear-gradient(135deg, #7F00FF, #E100FF);
+  color: #fff;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 17px;
+  margin-top: 20px;
+
+  width: 100%;            /* Que ocupe todo el ancho */
+  box-sizing: border-box;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #ffffff;
+  transform: translateY(-8px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagen dentro del formulario */
+#ImagenPrincipal {
+  width: 180px;
+  height: auto;
+  margin-bottom: 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#ImagenPrincipal:hover {
+  transform: scale(1.05) translateY(-5px);
+  filter: brightness(1.2);
+}
+
+/*-------------------------------------------Fin De Estilos Captura---------------------------------------*/
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------Inicio De Elegir Formato---------------------------------------*/
+/* Elegir Formato */
+/* Contenedor principal */
+.pagina-fondo-blanco {
+  background-color: #fff;
+  min-height: 100vh;
+  padding: 20px; /* opcional */
+}
+
+
+.ElegirFormato_box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  padding: 20px;
+  background: #ffffff;
+}
+
+/* Tarjeta */
+.formato-item {
+  width: 100%;
+  background: #f9f9f9;
+  border: 3px solid #9900FF;
+  border-radius: 12px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 20px;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.formato-item:hover {
+  background: #f0f0f0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+/* Imagen */
+.formato-item img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* Info */
+.formato-item .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+/* Titulo */
+.formato-item .titulo {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: #333;
+}
+
+/* Descripción */
+.formato-item .descripcion {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+/* Botón */
+.boton-ir {
+  align-self: flex-start;
+  padding: 6px 14px;
+  background: linear-gradient(135deg, #7F00FF, #E100FF);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.boton-ir:hover {
+    background-color: #ffffff;
+    color: #7F00FF;
+    transform: translateY(-5px);
+  }
+
+/* Botón abajo */
+.BotonesAbajo_box {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+.BotonAbajo {
+  background: #2266cc;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.BotonAbajo:hover {
+  background: #004499;
+}
+
+#buscadorFormatos {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+
+
+  /* ---------------------- Fin De Elegir Formato---------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+/*-------------------------------------------Inicio De LlenadodeFormato---------------------------------------*/
+
+  .LleandodeFormato_Box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .LlenadodeFormato {
+  border-radius: 20px; /* Bordes redondeados de 20px */
+  padding: 30px; /* Espaciado interno de 30px */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); /* Sombra alrededor de la caja */
+  display: flex; /* Activa el modelo Flexbox */
+  flex-direction: column; /* Organiza los elementos hijos en columna */
+  align-items: center; /* Centra horizontalmente los elementos */
+  justify-content: center; /* Centra verticalmente los elementos */
+  width: 60%; /* La caja ocupa el 60% del ancho disponible */
+  max-width: 400px; /* Máximo ancho de 400px */
+  margin: 80px auto; /* Centra la caja horizontalmente y deja 80px arriba */
+}
+
+/*-------------------------------------------Fin De LlenadodeFormato---------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------Inicio De HistorialReporte---------------------------------------*/
+
+  
+.Historial_box {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contenedor {
+  background: #fff8b3;
+  border: 2px solid black;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 700px;
+}
+
+/* Botón buscar */
+.btn-buscar {
+  display: block;
+  margin: 0 auto 20px;
+  background: white;
+  border: 3px solid #7b4db3;
+  color: #555;
+  padding: 10px 30px;
+  border-radius: 25px;
+  font-size: 1.5rem;
+  width: 70%;
+}
+
+.icono-pata {
+  margin-right: 10px;
+}
+
+/* Historial */
+.historial h2 {
+  background: #7b4db3;
+  color: black;
+  padding: 8px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.filtro h3 {
+  background: #7b4db3;
+  color: black;
+  padding: 5px;
+  text-align: center;
+}
+
+.filtro button {
+  display: block;
+  width: 100%;
+  background: #2e0061;
+  color: white;
+  padding: 5px;
+  margin-top: 2px;
+  font-weight: bold;
+}
+
+/* Reportes */
+.lista-reportes {
+  margin-top: 10px;
+}
+
+.reporte {
+  background: white;
+  border: 2px solid black;
+  padding: 8px;
+  margin: 5px 0;
+}
+
+  /* ---------------------- Fin De HistorialReporte ---------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*-------------------------------------------Inicio De GeneracionReporte---------------------------------------*/
+.form_box5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+.form {
+  width: 100%;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.form h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.registro h1 {
+  font-size: 1.4rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.registro {
+  font-size: 1rem;
+  color: #555;
+  background: #f1f1f1;
+  padding: 1rem;
+  border-left: 4px solid #6a0dad; /* morado */
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.Generacion_Box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn_filtro {
+  background: linear-gradient(to right, #7e57c2, #9575cd);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn_filtro:hover {
+  background: linear-gradient(to right, #5e35b1, #7e57c2);
+}
+
+.iconos-descarga img {
+  height: 40px;
+  margin-right: 1rem;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.iconos-descarga img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .Generacion_Box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .iconos-descarga {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}
+
+
+
+    /* ---------------------- MEDIA QUERY ---------------------- */
+  @media (max-width: 500px) {
+    .ButtonsBelow_Box {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .father {
+      gap: 100px;
+    }
+
+    .WelcomeMessage{
+margin-top: 10px; 
+     font-size: 11px;
+    }
+  }
+
+    @media (max-width: 1200px) {
+    .father3{
+ background: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+  backdrop-filter: blur(100px);          /* Aplica el desenfoque */  
+ }
+  }
+
+
+/* Modo oscuro */
+
+
+
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Formularios */
+.dark-mode .login-box,
+.dark-mode .login-box-interno,
+.dark-mode .formbold-form-wrapper {
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
+
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select,
+.dark-mode .login-input,
+.dark-mode .formbold-form-input {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border-color: #444;
+}
+
+.dark-mode input:focus,
+.dark-mode textarea:focus,
+.dark-mode .formbold-form-input:focus {
+  border-color: #888;
+  background-color: #333;
+}
+
+/* Botones */
+
+.dark-mode .login-btn {
+  background-color: #3b3bff;
+  color: white;
+}
+
+
+.dark-mode .login-btn:hover {
+  background-color: #2a2acb;
+}
+/* Tarjetas */
+.dark-mode .formato-item{
+    background-color: #2A2A2A;
+}
+
+.dark-mode .formato-item .titulo {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: #ffffff;
+}
+
+.dark-mode .formato-item .descripcion {
+  font-weight: 400;
+  margin: 0 0 4px 0;
+  color: #ffffff;
+}
+
+/* Footer */
+.dark-mode .footer {
+  background-color: #1a1a1a;
+  color: #aaa;
+}
+
+.dark-mode h3, p, a{
+  color: #ffffff;
+}
+
+.dark-mode .regresar-captureData-box .volver-link {
+  color: white;
+}
+
+.dark-mode .MensajeBienvenida_Box .MensajeBienvenida {
+  color: white;
+}
+
+.dark-mode .BotonesAbajo_box .BotonAbajo2 {
+  color: white;
+}
+.dark-mode .volver-link:hover {
+  color:#9200FF;
+}
+
+/* Estilos base ya existentes para #BarraNavegacion y sus hijos */
+/* ... mantén tu CSS normal sin cambios */
+
+/* Ajustes responsivos para el header */
+@media (max-width: 480px) {
+  /* Cambiar layout del nav a columna y centrar */
+  #BarraNavegacion {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px;
+    padding: 10px 15px;
+  }
+  #ImagenPrincipal {
+    width: 90px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  /* El mensaje (MessageHeader) centrado y con tamaño más pequeño */
+  .MessageHeader {
+    width: 100%;
+    text-align: center;
+  }
+
+  .MessageHeader h1 {
+    font-size: clamp(16px, 4vw, 20px);
+    margin: 0;
+  }
+
+  /* Contenedor User_Box centrado, con espacio entre elementos */
+  .User_Box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* Imagen usuario más pequeña */
+  .user-img {
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+  }
+
+  /* Toggle Dark mode pequeño */
+  .darkmode-switch {
+    transform: scale(0.8);
+  }
+
+  /* Ajustar menú desplegable para que se vea bien */
+  .menu-opciones {
+    top: 40px !important;
+    right: 10px !important;
+    min-width: 120px;
+  }
+}
+
+
+
+
+
+/* Dark Mode General */
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Botones */
+.dark-mode .login-btn,
+.dark-mode button,
+.dark-mode .btn-descargar,
+.dark-mode .btn-detalle {
+  background-color: #3a3a8c;
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.dark-mode .login-btn:hover,
+.dark-mode button:hover,
+.dark-mode .btn-descargar:hover,
+.dark-mode .btn-detalle:hover {
+  background-color: #2a2acb;
+}
+
+/* Tarjetas, tablas y cajas */
+.dark-mode .formato-item,
+.dark-mode .tabla-historial,
+.dark-mode .ContornoReporte {
+  background-color: #2A2A2A;
+  color: #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+}
+
+/* Titulos y textos */
+.dark-mode .formato-item .titulo,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p,
+.dark-mode a,
+.dark-mode .titulo-historial {
+  color: #ffffff;
+}
+
+.dark-mode .formato-item .descripcion {
+  color: #ccc;
+}
+
+/* Footer */
+.dark-mode .footer {
+  background-color: #1a1a1a;
+  color: #aaa;
+}
+
+/* Links */
+.dark-mode a,
+.dark-mode .volver-link,
+.dark-mode .regresar-captureData-box .volver-link {
+  color: #bbb;
+  text-decoration: none;
+}
+
+.dark-mode a:hover,
+.dark-mode .volver-link:hover {
+  color: #9200FF;
+  text-decoration: underline;
+}
+
+/* Detalle info box */
+.dark-mode .detalle-info {
+  background-color: #3a3a3a;
+  border-left: 5px solid #9200FF;
+  color: #ddd;
+}
+
+/* Inputs */
+.dark-mode input[type="text"],
+.dark-mode input[type="date"] {
+  background-color: #222;
+  color: #eee;
+  border: 2px solid #9200FF;
+  border-radius: 5px;
+  padding: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.dark-mode input[type="text"]:focus,
+.dark-mode input[type="date"]:focus {
+  border-color: #e100ff;
+  outline: none;
+}
+
+/* Scrollbars (optional) */
+.dark-mode ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb {
+  background: #7F00FF;
+  border-radius: 4px;
+}
+
+.dark-mode ::-webkit-scrollbar-track {
+  background: #2a2a2a;
+}
+
+
+/* Hover fila en tabla dark mode */
+.dark-mode .tabla-historial tbody tr:hover {
+  background-color: #3a3a3a !important;
+  color: #fff;
+}
+
+/* Texto de las celdas al hacer hover */
+.dark-mode .tabla-historial tbody tr:hover td {
+  color: #fff;
+}
+
+/* Estilos detalle cuando visible en dark mode */
+.dark-mode .detalle.visible {
+  background-color: #2a2a2a !important;
+  color: #fff !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+  border-left-color: #9200FF !important;
+  padding: 15px !important;
+  border-radius: 6px !important;
+}
+
+/* Texto dentro de detalle */
+.dark-mode .detalle-info p {
+  color: #eee !important;
+}
+
+/* También aseguramos que botones dentro de detalle se vean */
+.dark-mode .btn-detalle {
+  color: #fff !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

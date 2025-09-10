@@ -1,0 +1,84 @@
+body {
+  background-image: url('../../public/images/Fondo.gif'); 
+  background-size: cover; 
+  background-attachment: fixed; 
+  background-repeat: no-repeat; 
+  font-family: 'Poppins', sans-serif; 
+  text-align: center; 
+  margin: 0; 
+  padding: 0; 
+  transition: all 0.4s ease;
+  min-height: 100vh; 
+}
+
+  #BarraNavegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    background: linear-gradient(135deg, #7F00FF, #E100FF);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+
+  }
+  
+
+.error-box {
+    border: 2px solid #9500ff;
+  border-radius: 20px; /* Bordes redondeados de 20px */
+  padding: 30px; /* Espaciado interno de 30px */
+  backdrop-filter: blur(100px); /* Aplica un difuminado al fondo detrás del elemento */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); /* Sombra alrededor de la caja */
+  display: flex; /* Activa el modelo Flexbox */
+  flex-direction: column; /* Organiza los elementos hijos en columna */
+  align-items: center; /* Centra horizontalmente los elementos */
+  justify-content: center; /* Centra verticalmente los elementos */
+  width: 60%; /* La caja ocupa el 60% del ancho disponible */
+  max-width: 400px; /* Máximo ancho de 400px */
+  margin: 80px auto; /* Centra la caja horizontalmente y deja 80px arriba */
+  transition: all 0.3s ease; /* Transición suave de 0.3 segundos */
+}
+
+/* Estilo del botón de login */
+.error-btn {
+background: linear-gradient(135deg, #7F00FF, #E100FF);
+  color: #fff; /* Color de texto */
+  padding: 10px 40px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 12px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia a mano al pasar el cursor */
+  font-size: 17px; /* Tamaño de fuente */
+  margin-top: 20px; /* Margen superior de 20px */
+  transition: all 0.3s ease; /* Transición suave */
+  width: 100%; /* Ancho del 80% */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15); /* Sombra */
+}
+
+.error-btn:hover {
+    transform: scale(1.10);
+  }
+  
+/* Barra de navegación */
+#BarraNavegacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.MessageHeader{
+  position:relative;
+  background-color: #ffffff;
+  width: 20%;
+  border-radius: 40px;
+}
+
+/* Imagen Principal */
+#ImagenPrincipal {
+  width: 180px; /* Ancho fijo */
+  height: auto; /* Altura automática según ancho */
+  margin-bottom: 0; /* Sin margen inferior */
+}
+
+
+

@@ -1,0 +1,18 @@
+Paleta de colores:
+    Color Principal: #7F00FF
+    Degradado: 135deg, #7F00FF, rgba(225, 0, 255, 1)
+    background: linear-gradient(135deg, #7F00FF, #E100FF);
+
+
+Definicion del proyecto:
+Sistema web desarrollado para optimizar el proceso de llenado de formatos veterinarios,
+reemplazando registros en Excel. Cada formato PDF cargado queda vinculado a un formulario
+dinámico que encapsula información proveniente de 5 tablas relacionadas, permitiendo 
+identificar de manera precisa la información asociada a cada registro.
+
+Al regresar a select no te mande hasta arriba...---
+Resguardo---
+EncuestaDeSatisfaccion---
+definir proyecto---
+imagenes en select format---
+limpiar codigo / Margen A formualarios
