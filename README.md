@@ -80,5 +80,4 @@ Actualmente se encuentra en **uso activo** dentro del **Instituto Moreliano de P
 ---
 
 ## 📝 Notas
-Este repositorio es **privado** y no se distribuye públicamente.  
 El presente README tiene fines de **portafolio profesional**.  
